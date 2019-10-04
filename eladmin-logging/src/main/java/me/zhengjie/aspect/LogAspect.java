@@ -65,7 +65,7 @@ public class LogAspect {
     @AfterThrowing(pointcut = "logPointcut()", throwing = "e")
     public void logAfterThrowing(JoinPoint joinPoint, Throwable e) {
         Log log = new Log("ERROR",System.currentTimeMillis() - currentTime);
-        log.setExceptionDetail(ThrowableUtil.getStackTrace(e).getBytes());
+        //log.setExceptionDetail(ThrowableUtil.getStackTrace(e).getBytes());
         logService.save(getUsername(), StringUtils.getIP(RequestHolder.getHttpServletRequest()), (ProceedingJoinPoint)joinPoint, log);
     }
 

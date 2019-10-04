@@ -43,7 +43,7 @@ public class TranslatorUtil {
         JSONArray jsonArray2 = (JSONArray) jsonArray.get(0);
         String result ="";
 
-        for(var i = 0; i < jsonArray2.size(); i ++){
+        for(int i = 0; i < jsonArray2.size(); i ++){
             result += ((JSONArray) jsonArray2.get(i)).get(0).toString();
         }
         return result;
